@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Showcaser</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICON LIBRARY -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="sidebar collapsed" id="sidebar">
+
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+    <div class="logo"></div>
+
+    <a href="index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="about.html">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>About</span>
+    </a>
+
+    <a href="games.html">
+        <i class="fa-solid fa-gamepad"></i>
+        <span>Games</span>
+    </a>
+
+    <a href="reviews.html">
+        <i class="fa-solid fa-star"></i>
+        <span>Reviews</span>
+    </a>
+
+</nav>
+
+<div class="content">
+    <section>
+        <h2>About</h2>
+        <p>
+            Showcaser is a website dedicated to reviewing games, especially Genshin Impact.
+            We break down gameplay, characters, and overall experience.
+        </p>
+    </section>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+}
+</script>
+
+</body>
+</html>

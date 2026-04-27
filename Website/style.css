@@ -1,0 +1,201 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #0f172a;
+}
+
+section {
+    padding: 40px;
+}
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 130px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+    padding: 20px;
+
+    border-right: 1px solid #c7d133;
+
+    z-index: 1000;
+
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+/* collapsed sidebar */
+nav.collapsed {
+    width: 35px;
+}
+
+/* links */
+nav a {
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+
+    margin: 10px 0;
+
+    white-space: nowrap;
+
+    /* stable alignment */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 7px;
+}
+
+/* icon styling (LOCKED POSITION) */
+nav i {
+    width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* hide text when collapsed (no layout shift) */
+nav.collapsed span {
+    display: none;
+}
+
+/* IMPORTANT: removed centering/justify changes to prevent movement */
+
+/* optional logo */
+nav h1 {
+    margin: 0;
+    color: black;
+}
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    margin-bottom: 20px;
+
+    align-self: flex-start;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 100px 50px;
+
+    background: url("ContemplationinSky.png") center/cover no-repeat;
+    color: #0f172a;
+}
+
+/* overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* keep content above overlay */
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.hero p {
+    color: #475569;
+}
+
+/* hero logo */
+.hero-logo {
+    width: 500px;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.4));
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #2f4767;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #2563eb;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.gold {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+/* content spacing */
+.content {
+    padding-left: 220px;
+}
