@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
+    <!-- website tab title -->
     <title>About - Showcaser</title>
 
+    <!-- connects css file -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- ICON LIBRARY -->
+    <!-- icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
+<!-- sidebar navigation -->
 <nav class="sidebar collapsed" id="sidebar">
 
+    <!-- hamburger button -->
     <button class="hamburger" onclick="toggleSidebar()">☰</button>
 
+    <!-- logo area -->
     <div class="logo"></div>
 
+    <!-- home page -->
     <a href="index.html">
         <i class="fa-solid fa-house"></i>
         <span>Home</span>
     </a>
 
+    <!-- about page -->
+    <!-- active class highlights current page -->
     <a href="about.html" class="active">
         <i class="fa-solid fa-circle-info"></i>
         <span>About</span>
     </a>
 
+    <!-- games page -->
     <a href="games.html">
         <i class="fa-solid fa-gamepad"></i>
         <span>Games</span>
     </a>
 
+    <!-- reviews page -->
     <a href="reviews.html">
         <i class="fa-solid fa-star"></i>
         <span>Reviews</span>
@@ -39,35 +52,51 @@
 
 </nav>
 
+<!-- main page content -->
 <div class="content">
+
     <section>
+
+    <!-- about heading -->
     <h2>About Showcaser</h2>
 
+    <!-- card container -->
     <div class="card">
+
+        <!-- first paragraph -->
         <p>
             Showcaser is a personal gaming website focused on reviews,
             showcases, and opinions on different games.
         </p>
 
+        <!-- second paragraph -->
         <p>
             The main focus is currently on Genshin Impact, but more
             games and reviews will be added in the future.
         </p>
 
+        <!-- third paragraph -->
         <p>
             This website was built using HTML and CSS as a creative
             web development project.
         </p>
+
     </div>
 </section>
 </div>
 
 <script>
-function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("collapsed");
-}
+
+    // function for opening and closing sidebar
+    function toggleSidebar() {
+
+        // toggles collapsed class
+        document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+
 </script>
 
+<!-- footer -->
 <footer>
     © 2026 Showcaser
 </footer>
