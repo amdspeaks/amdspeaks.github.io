@@ -2,15 +2,27 @@
    GLOBAL
 ========================= */
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #ffffff;
+    background: #f8fafc;
     color: #0f172a;
 }
 
 section {
     padding: 40px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
 }
 
 /* =========================
@@ -27,21 +39,27 @@ nav {
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     background: #ffffff;
-    padding: 20px;
+    padding: 20px 10px;
 
     border-right: 1px solid #c7d133;
 
     z-index: 1000;
 
     transition: width 0.3s ease;
-    overflow: hidden;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
 }
 
 /* collapsed sidebar */
 nav.collapsed {
-    width: 35px;
+    width: 70px;
+    align-items: center;
 }
 
 /* links */
@@ -50,36 +68,49 @@ nav a {
     text-decoration: none;
     font-weight: 500;
 
-    margin: 10px 0;
+    width: 100%;
+
+    margin: 8px 0;
 
     white-space: nowrap;
 
-    /* stable alignment */
     display: flex;
     align-items: center;
     gap: 10px;
 
-    padding-left: 7px;
+    padding: 10px 12px;
+    border-radius: 8px;
+
+    transition: 0.2s;
 }
 
-/* icon styling (LOCKED POSITION) */
+nav a:hover {
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+/* active page */
+nav a.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* icon styling */
 nav i {
     width: 20px;
-    flex-shrink: 0;
     text-align: center;
+    flex-shrink: 0;
 }
 
-/* hide text when collapsed (no layout shift) */
+/* hide text when collapsed */
 nav.collapsed span {
     display: none;
 }
 
-/* IMPORTANT: removed centering/justify changes to prevent movement */
-
-/* optional logo */
-nav h1 {
-    margin: 0;
-    color: black;
+/* center icons when collapsed */
+nav.collapsed a {
+    justify-content: center;
+    padding: 10px 0;
 }
 
 /* =========================
@@ -93,8 +124,7 @@ nav h1 {
     cursor: pointer;
 
     margin-bottom: 20px;
-
-    align-self: flex-start;
+    color: #0f172a;
 }
 
 /* =========================
@@ -103,7 +133,7 @@ nav h1 {
 
 .hero {
     position: relative;
-    min-height: 80vh;
+    min-height: 90vh;
 
     display: flex;
     flex-direction: column;
@@ -122,7 +152,7 @@ nav h1 {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.35);
 }
 
 /* keep content above overlay */
@@ -132,20 +162,33 @@ nav h1 {
 }
 
 .hero h2 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 10px;
     color: black;
 }
 
 .hero p {
-    color: #475569;
+    color: #334155;
+    font-size: 18px;
 }
 
 /* hero logo */
 .hero-logo {
     width: 500px;
+    max-width: 90%;
     margin-bottom: 5px;
+
     filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.4));
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    padding-left: 220px;
+    padding-right: 40px;
+    padding-top: 30px;
 }
 
 /* =========================
@@ -154,48 +197,143 @@ nav h1 {
 
 .card {
     background: #ffffff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    border: 1px solid #2f4767;
-    transition: 0.2s;
+    padding: 25px;
+    margin: 20px 0;
+
+    border-radius: 14px;
+
+    border: 1px solid #dbe4ee;
+
+    transition: 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
 }
 
 .card:hover {
     transform: translateY(-5px);
     border-color: #2563eb;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card p {
+    color: #475569;
+    line-height: 1.6;
 }
 
 /* =========================
-   LOGO
+   REVIEW SCORE
 ========================= */
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.logo img {
-    height: 100px;
-    width: auto;
-}
-
-.logo h1 {
-    font-size: 20px;
-    margin: 0;
-}
-
-/* =========================
-   UTILITIES
-========================= */
-
-.gold {
+.rating {
     color: #f59e0b;
-    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-/* content spacing */
-.content {
-    padding-left: 220px;
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+
+    text-align: center;
+
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .content {
+        padding-left: 90px;
+        padding-right: 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero-logo {
+        width: 300px;
+    }
+}
+
+/* =========================
+   REVIEW PAGE
+========================= */
+
+.review-hero {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.review-banner {
+    width: 100%;
+    max-width: 1000px;
+
+    border-radius: 16px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.review-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.review-subtitle {
+    font-size: 18px;
+    color: #475569;
+
+    max-width: 700px;
+    margin: auto;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+#video {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 16px;
+    display: block;
+    margin: 20px auto;
 }

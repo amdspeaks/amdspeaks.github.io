@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genshin Impact Review - Showcaser</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICON LIBRARY -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<nav class="sidebar collapsed" id="sidebar">
+
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+    <div class="logo"></div>
+
+    <a href="index.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="about.html">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>About</span>
+    </a>
+
+    <a href="games.html">
+        <i class="fa-solid fa-gamepad"></i>
+        <span>Games</span>
+    </a>
+
+    <a href="reviews.html" class="active">
+        <i class="fa-solid fa-star"></i>
+        <span>Reviews</span>
+    </a>
+
+</nav>
+
+<!-- CONTENT -->
+
+<div class="content">
+
+    <!-- HERO -->
+
+    <section class="review-hero">
+
+        <img src="a&l.jpg"
+        alt="Genshin Impact Banner"
+        class="review-banner">
+
+        <h1>Genshin Impact Review</h1>
+
+        <div class="rating">
+            ★★★★☆
+        </div>
+
+        <p class="review-subtitle">
+            A beautiful open-world RPG with addictive exploration
+            and strong character design.
+        </p>
+
+    </section>
+
+    <!-- OVERVIEW -->
+
+    <section>
+
+        <div class="card">
+
+            <h2>Overview</h2>
+
+            <p>
+                Genshin Impact is an open-world action RPG developed by
+                HoYoverse. The game combines anime-inspired visuals,
+                elemental combat, exploration, and gacha mechanics.
+            </p>
+
+            <p>
+                Since launch, the game has expanded massively with
+                multiple regions, story arcs, and playable characters.
+            </p>
+
+            <p> 
+                The story revolves around the player character, known as the Traveler, who is 
+                searching for their lost sibling across the world of Teyvat.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GAMEPLAY -->
+
+    <section>
+
+        <video autoplay muted loop id="video">
+            <source src="genshingameplay.mp4" type="video/mp4">
+             
+        </video>
+
+        <div class="card">
+
+            <h2>Gameplay</h2>
+
+            <p>
+                Combat revolves around elemental reactions.
+                Combining elements like Hydro, Pyro, and Electro
+                creates satisfying combos during battles.
+            </p>
+
+            <p>
+                Exploration is one of the strongest parts of the game.
+                Every region feels unique and encourages players
+                to discover secrets, puzzles, and hidden quests.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- VISUALS -->
+
+    <section>
+
+        <div class="card">
+
+            <h2>Visuals & Music</h2>
+
+            <p>
+                The environments are visually impressive,
+                especially newer regions with improved lighting
+                and environmental detail.
+            </p>
+
+            <p>
+                The soundtrack is consistently excellent and helps
+                every region feel memorable and immersive.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PROS & CONS -->
+
+    <section>
+
+        <div class="card">
+
+            <h2>Pros</h2>
+
+            <ul>
+                <li>Beautiful open world</li>
+                <li>Great soundtrack</li>
+                <li>Fun elemental combat</li>
+                <li>Large amount of content</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Cons</h2>
+
+            <ul>
+                <li>Heavy reliance on gacha mechanics</li>
+                <li>Grinding can become repetitive</li>
+                <li>Some story pacing issues</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL VERDICT -->
+
+    <section>
+
+        <div class="card">
+
+            <h2>Final Verdict</h2>
+
+            <p>
+                Genshin Impact remains one of the strongest free-to-play
+                RPG experiences available today. While the gacha system
+                may not appeal to everyone, the exploration, visuals,
+                and gameplay make it worth trying.
+            </p>
+
+            <h3>Score: 8.5 / 10</h3>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 Showcaser
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar")
+    .classList.toggle("collapsed");
+}
+</script>
+
+</body>
+</html>
